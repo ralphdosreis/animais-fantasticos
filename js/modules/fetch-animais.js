@@ -1,11 +1,11 @@
-import AnimaNumeros from "./anima-numeros.js";
+import AnimaNumeros from './anima-numeros.js';
 
 export default function fetchAnimais(url, target) {
-  // Cria a div contendo as informações
+  // Cria a div contendo informações
   // com o total de animais
   function createAnimal(animal) {
-    const div = document.createElement("div");
-    div.classList.add("numero-animal");
+    const div = document.createElement('div');
+    div.classList.add('numero-animal');
     div.innerHTML = `<h3>${animal.specie}</h3><span data-numero>${animal.total}</span>`;
     return div;
   }
@@ -19,7 +19,7 @@ export default function fetchAnimais(url, target) {
 
   // Anima os números de cada animal
   function animaAnimaisNumeros() {
-    const animaNumeros = new AnimaNumeros("[data-numero]", ".numeros", "ativo");
+    const animaNumeros = new AnimaNumeros('[data-numero]', '.numeros', 'ativo');
     animaNumeros.init();
   }
 
@@ -39,5 +39,6 @@ export default function fetchAnimais(url, target) {
       console.log(erro);
     }
   }
+
   return criarAnimais();
 }
